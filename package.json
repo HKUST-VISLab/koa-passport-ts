@@ -1,7 +1,7 @@
 {
-  "name": "koa-bodyparser-ts",
-  "version": "0.1.2",
-  "description": "a bodyparser for koa written in TypeScript.",
+  "name": "koa-passport-ts",
+  "version": "0.0.1",
+  "description": "the passport middleware for koa written in TypeScript.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
@@ -16,21 +16,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HKUST-VISLab/koa-bodyparser-ts.git"
+    "url": "git+https://github.com/HKUST-VISLab/koa-passport-ts.git"
   },
   "keywords": [
     "koa",
-    "bodyparser",
+    "passport",
     "typescript"
   ],
   "author": "chenzhutian",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HKUST-VISLab/koa-bodyparser-ts/issues"
+    "url": "https://github.com/HKUST-VISLab/koa-passport-ts/issues"
   },
-  "homepage": "https://github.com/HKUST-VISLab/koa-bodyparser-ts#readme",
+  "homepage": "https://github.com/HKUST-VISLab/koa-passport-ts#readme",
   "dependencies": {
-    "@types/koa": "^2.0.40"
+    "@types/koa": "^2.0.40",
+    "koa-session-ts": "^0.1.2",
+    "nock": "^9.1.0"
   },
   "devDependencies": {
     "@types/supertest": "^2.0.3",

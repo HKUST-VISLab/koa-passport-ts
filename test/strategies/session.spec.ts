@@ -4,9 +4,9 @@ import * as Koa from 'koa';
 import {
     ActionType,
     PassAction,
-} from '../../../../src/middlewares/passport/strategies';
-import { SessionStrategy } from '../../../../src/middlewares/passport/strategies/session';
-import { MockReq, MockRes } from '../../../testUtils';
+} from '../../src/strategies';
+import { SessionStrategy } from '../../src/strategies/session';
+import { MockReq, MockRes } from '../testUtils';
 
 test.beforeEach('init a HKMOOCStrategy', (t) => {
     const app = new Koa();

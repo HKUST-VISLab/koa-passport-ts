@@ -3,8 +3,8 @@ import * as Koa from 'koa';
 import * as nock from 'nock';
 import { parse } from 'url';
 
-import { HKMOOCStrategy } from '../../../../src/middlewares/passport/strategies/HKMOOCStrategy';
-import { MockReq, MockRes } from '../../../testUtils';
+import { HKMOOCStrategy } from '../../src/strategies/HKMOOCStrategy';
+import { MockReq, MockRes } from '../testUtils';
 
 interface TestContext {
     clientId: string;

@@ -1,7 +1,7 @@
 import test from 'ava';
 import * as Koa from 'koa';
-import { BaseStateStore, SessionStore } from '../../../../../src/middlewares/passport/strategies/baseOAuth2';
-import { MockReq, MockRes } from '../../../../testUtils';
+import { BaseStateStore, SessionStore } from '../../../src/strategies/baseOAuth2';
+import { MockReq, MockRes } from '../../testUtils';
 
 interface TestContext {
     app: Koa;

@@ -9,17 +9,17 @@ import {
     FailAction,
     RedirectAction,
     SuccessAction,
-} from '../../../../../src/middlewares/passport/strategies';
+} from '../../../src/strategies';
 import {
     AuthorizationError,
     BaseOAuth2Strategy,
     TokenError,
-} from '../../../../../src/middlewares/passport/strategies/baseOAuth2';
+} from '../../../src/strategies/baseOAuth2';
 import {
     BaseStateStore,
-} from '../../../../../src/middlewares/passport/strategies/baseOAuth2/stateStore';
-import { OAuth2Error } from '../../../../../src/utils/oauth2';
-import { MockReq, MockRes } from '../../../../testUtils';
+} from '../../../src/strategies/baseOAuth2/stateStore';
+import { OAuth2Error } from '../../../src/utils/oauth2';
+import { MockReq, MockRes } from '../../testUtils';
 
 interface TestContext {
     clientId: string;

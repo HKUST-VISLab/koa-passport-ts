@@ -1,7 +1,7 @@
 import test from 'ava';
 import * as Koa from 'koa';
-import augmentContext from '../../../src/middlewares/passport/augmentContex';
-import { MockReq, MockRes } from '../../testUtils';
+import augmentContext from '../src/augmentContex';
+import { MockReq, MockRes } from './testUtils';
 
 interface TestContext {
     app: Koa;

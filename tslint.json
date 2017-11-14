@@ -27,6 +27,11 @@
         "interface-name": [
             false
         ],
-        "arrow-parens": false
+        "arrow-parens": false,
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ]
     }
 }

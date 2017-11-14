@@ -1,5 +1,5 @@
 import test from 'ava';
-import { AuthenticationError } from '../../../src/middlewares/passport/authenticationerror';
+import { AuthenticationError } from '../src/authenticationerror';
 
 test('Authentication#constructor', (t) => {
     const msg: string = 'Test';

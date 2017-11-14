@@ -1,7 +1,7 @@
 import test from 'ava';
 import {
     AuthorizationError, TokenError,
-} from '../../../../../src/middlewares/passport/strategies/baseOAuth2';
+} from '../../../src/strategies/baseOAuth2';
 
 test('AuthorizationError#constructor, with default params', (t) => {
     const msg = 'a error';

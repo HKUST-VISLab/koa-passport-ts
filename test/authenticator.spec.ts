@@ -1,14 +1,14 @@
 import test from 'ava';
 import * as http from 'http';
 import * as Koa from 'koa';
-import { Passport } from '../../../src/middlewares/passport';
+import { Passport } from '../src';
 import {
     AuthenticationError,
-} from '../../../src/middlewares/passport/authenticationerror';
+} from '../src/authenticationerror';
 import {
     AuthenticateOption,
-} from '../../../src/middlewares/passport/authenticator';
-import { ActionType } from '../../../src/middlewares/passport/strategies';
+} from '../src/authenticator';
+import { ActionType } from '../src/strategies';
 import {
 //    BaseAction,
     BaseStrategy,
@@ -16,8 +16,8 @@ import {
     PassAction,
     RedirectAction,
     SuccessAction,
-} from '../../../src/middlewares/passport/strategies/base';
-import { MockReq, MockRes } from '../../testUtils';
+} from '../src/strategies/base';
+import { MockReq, MockRes } from './testUtils';
 
 interface TestContext {
     app: Koa;
