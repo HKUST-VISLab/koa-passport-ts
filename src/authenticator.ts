@@ -19,6 +19,10 @@ declare module 'koa-session-ts' {
 declare module 'koa' {
     interface Context {
         passport: Authenticator;
+        login(user: any): Promise<void>;
+        logout(): void;
+        isAuthenticated(): boolean;
+        isUnauthenticated(): boolean;
     }
 }
 

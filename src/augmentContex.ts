@@ -1,14 +1,5 @@
 import { BaseContext, Context } from 'koa';
 
-declare module 'koa' {
-    export interface Context {
-        login(user: any): Promise<void>;
-        logout(): void;
-        isAuthenticated(): boolean;
-        isUnauthenticated(): boolean;
-    }
-}
-
 /**
  * Intiate a login session for `user`.
  *
