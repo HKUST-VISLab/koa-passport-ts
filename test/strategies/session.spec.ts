@@ -4,8 +4,8 @@ import * as Koa from 'koa';
 import {
     ActionType,
     PassAction,
-} from '../../src/strategies';
-import { SessionStrategy } from '../../src/strategies/session';
+    SessionStrategy,
+} from '../../src';
 import { MockReq, MockRes } from '../testUtils';
 
 test.beforeEach('init a HKMOOCStrategy', (t) => {

@@ -1,5 +1,5 @@
 import test from 'ava';
-import { AuthenticationError } from '../src/authenticationerror';
+import { AuthenticationError } from '../src';
 
 test('Authentication#constructor', (t) => {
     const msg: string = 'Test';

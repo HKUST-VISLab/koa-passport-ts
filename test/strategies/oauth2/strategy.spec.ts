@@ -13,11 +13,9 @@ import {
 import {
     AuthorizationError,
     BaseOAuth2Strategy,
-    TokenError,
-} from '../../../src/strategies/baseOAuth2';
-import {
     BaseStateStore,
-} from '../../../src/strategies/baseOAuth2/stateStore';
+    TokenError,
+} from '../../../src/strategies/oauth2';
 import { OAuth2Error } from '../../../src/utils/oauth2';
 import { MockReq, MockRes } from '../../testUtils';
 

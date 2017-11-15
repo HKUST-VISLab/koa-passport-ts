@@ -1,22 +1,16 @@
 import test from 'ava';
 import * as http from 'http';
 import * as Koa from 'koa';
-import { Passport } from '../src';
-import {
-    AuthenticationError,
-} from '../src/authenticationerror';
-import {
+import { ActionType,
     AuthenticateOption,
-} from '../src/authenticator';
-import { ActionType } from '../src/strategies';
-import {
-//    BaseAction,
+    AuthenticationError,
+
     BaseStrategy,
     FailAction,
     PassAction,
+    Passport,
     RedirectAction,
-    SuccessAction,
-} from '../src/strategies/base';
+    SuccessAction } from '../src';
 import { MockReq, MockRes } from './testUtils';
 
 interface TestContext {

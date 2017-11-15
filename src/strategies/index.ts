@@ -1,11 +1,3 @@
-export {
-    BaseStrategy,
-    ActionType,
-    BaseAction,
-    PassAction,
-    FailAction,
-    RedirectAction,
-    SuccessAction,
-} from './base';
+export * from './base';
 export { SessionStrategy } from './session';
-export { HKMOOCStrategy } from './HKMOOCStrategy';
+export * from './oauth2';

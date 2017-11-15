@@ -2,8 +2,8 @@ import test from 'ava';
 import * as Koa from 'koa';
 import {
     ActionType,
-} from '../../src/strategies';
-import { BaseStrategy } from '../../src/strategies/base';
+    BaseStrategy,
+} from '../../src';
 import { MockReq, MockRes } from '../testUtils';
 
 test('BaseStrategy#authenticate', async (t) => {
