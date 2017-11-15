@@ -1,3 +1,4 @@
+import { Authenticator } from './authenticator';
 export { AuthenticationError } from './authenticationerror';
-export { Authenticator as Passport } from './authenticator';
+export { Authenticator as Passport };
 export { HKMOOCStrategy } from './strategies';

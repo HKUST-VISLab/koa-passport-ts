@@ -3,7 +3,7 @@ import { Authenticator } from '../authenticator';
 
 export class BaseStrategy {
     protected name: string;
-    private authenticator: Authenticator;
+    protected authenticator: Authenticator;
 
     public get Name(): string {
         return this.name;

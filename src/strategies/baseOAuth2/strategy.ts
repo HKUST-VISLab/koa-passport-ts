@@ -1,11 +1,12 @@
 import { Context } from 'koa';
 import { format, parse, resolve } from 'url';
-import { OAuth2, OAuth2Error } from '../../../../utils/oauth2';
+import { OAuth2, OAuth2Error } from '../../utils/oauth2';
 import { BaseStrategy, FailAction, RedirectAction, SuccessAction } from '../base';
 import { AuthorizationError, TokenError } from './errors';
 import { BaseStateStore, SessionStore } from './stateStore';
 
-type VerifyFunction = (accessToken: string, refreshToken: string, params, profile: object) => Promise<{ user, info }>;
+export type VerifyFunction = (accessToken: string, refreshToken: string, params, profile: object)
+    => Promise<{ user, info }>;
 /**
  * Creates an instance of `OAuth2Strategy`.
  *

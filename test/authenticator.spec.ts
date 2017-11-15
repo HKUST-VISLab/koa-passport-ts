@@ -261,7 +261,7 @@ test('Passport#authenticate, which all failed with specified status code with ca
             t.false(user, 'user should be false');
             t.is(info, 'strategy1 failed', 'challenge 1 should be the same');
             t.is(status, 400, 'status 1 should be the same');
-        }, undefined);
+        });
     await middleware(ctx, next);
     const strategy2Name = 'Mock2';
     const strategy2 = new MockStrategy(ActionType.FAIL, {challenge: 'strategy2 failed', status: 401});

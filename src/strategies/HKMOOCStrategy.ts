@@ -20,7 +20,7 @@ export interface UserProfile {
     instructor_courses: string[];
 }
 
-type VerifyFunction = (accessToken: string, refreshToken: string, params, profile: UserProfile) =>
+export type VerifyFunction = (accessToken: string, refreshToken: string, params, profile: UserProfile) =>
     Promise<{ user, info }>;
 
 export const HKMOOCStrategyNAME = 'HKMOOCStrategy';

@@ -32,7 +32,8 @@
   "dependencies": {
     "@types/koa": "^2.0.40",
     "koa-session-ts": "^0.1.2",
-    "nock": "^9.1.0"
+    "nock": "^9.1.0",
+    "uid-ts": "0.0.2"
   },
   "devDependencies": {
     "@types/supertest": "^2.0.3",

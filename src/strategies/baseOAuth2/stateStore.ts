@@ -1,5 +1,5 @@
 import { Context } from 'koa';
-import { uidSync } from '../../../../utils';
+import { uidSync } from 'uid-ts';
 
 export interface StoreMeta {
     authorizationURL: string;

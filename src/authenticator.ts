@@ -1,6 +1,7 @@
 import * as http from 'http';
 import { BaseContext, Context, Middleware } from 'koa';
-// import { Session } from "../session";
+import { Session } from 'koa-session-ts';
+
 import augmentCtx from './augmentContex';
 import { AuthenticationError } from './authenticationerror';
 import { ActionType, BaseStrategy, SessionStrategy } from './strategies';
@@ -165,20 +166,23 @@ export class Authenticator {
      *     });
      *
      */
-    public initialize(userProperty?: string ): Middleware {
+    public initialize(userProperty?: string): Middleware {
         this.userProperty = userProperty;
 
         return async (ctx: Context, next) => {
             ctx.passport = this;
-            if (!ctx.session) {
+            const session: Session = ctx.session;
+            if (!session) {
                 throw new Error('Session middleware is needed with passport middleware!');
+                // ctx.app.use(sessionFactory());
             }
-            if (!('passport' in ctx.session)) {
-                ctx.session.passport = { user: undefined};
+            if (!('passport' in session)) {
+                ctx.session.passport = { user: undefined };
             }
-            if (!('message' in ctx.session)) {
-                ctx.session.message = {};
+            if (!('message' in session)) {
+                session.message = {};
             }
+            ctx.session = session;
             await next();
         };
     }
