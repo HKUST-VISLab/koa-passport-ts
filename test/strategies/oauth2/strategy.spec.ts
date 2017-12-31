@@ -634,7 +634,7 @@ test('BaseOAuth2Strategy#authenticate, that was approved using sessionStore', as
     const firstRes = await strategy.authenticate(ctx);
     t.deepEqual(firstRes.type, ActionType.REDIRECT, 'should be a redirect type');
     const { url } = (firstRes as RedirectAction);
-    const state = parse(url, true).query.state;
+    const { state } = parse(url, true).query as any;
     ctx.query = { code, state };
     const secondRes = await strategy.authenticate(ctx);
     t.deepEqual(secondRes.type, ActionType.SUCCESS, 'should be a success type');
@@ -702,7 +702,7 @@ test('BaseOAuth2Strategy#authenticate, that fails due to state do not match in t
         const firstRes = await strategy.authenticate(ctx);
         t.deepEqual(firstRes.type, ActionType.REDIRECT, 'should be a redirect type');
         const url = (firstRes as RedirectAction).url;
-        const state = parse(url, true).query.state;
+        const { state } = parse(url, true).query as any;
         ctx.query = { code, state: state + 'sdfd' };
         const secondRes = await strategy.authenticate(ctx);
         t.deepEqual(secondRes.type, ActionType.FAIL, 'should be a fail type');

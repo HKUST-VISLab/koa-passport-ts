@@ -181,7 +181,7 @@ export class BaseOAuth2Strategy extends BaseStrategy {
             }
             const parsed = parse(this.oauth2.AuthorizeUrl, true);
             parsed.query = Object.assign({}, parsed.query, params);
-            parsed.query.client_id = this.oauth2.ClientId;
+            (parsed.query as any).client_id = this.oauth2.ClientId;
             delete parsed.search;
             const location = format(parsed);
             return new RedirectAction(location);
