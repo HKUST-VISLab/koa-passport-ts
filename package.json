@@ -12,7 +12,7 @@
     "release": "git push --follow-tags origin master"
   },
   "engines": {
-    "node": ">=6.0"
+    "node": ">=8.0"
   },
   "repository": {
     "type": "git",
